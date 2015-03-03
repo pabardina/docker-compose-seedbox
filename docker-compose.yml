@@ -1,0 +1,21 @@
+transmission:
+  image : gfjardim/transmission
+  environment:
+    - USERNAME=username
+    - PASSWORD=password
+  volumes:
+    - /etc/localtime:/etc/localtime
+    - /downloads:/downloads
+    - /{PATH}/transmission/config:/config
+  ports:
+    - "9091:9091"
+
+sickbeard:
+  image: pabardina/sickbeard-fr
+  ports:
+   - "8081:8081"
+  volumes:
+   - /downloads:/downloads
+   - /downloads/tv:/tv
+   - /{PATH}/sickbeard/config:/config
+   - /etc/localtime:/etc/localtime
