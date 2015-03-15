@@ -6,7 +6,7 @@ transmission:
   volumes:
     - /etc/localtime:/etc/localtime
     - /downloads:/downloads
-    - /{PATH}/transmission/config:/config
+    - /home/download/transmission:/config
   ports:
     - "9091:9091"
 
@@ -17,5 +17,5 @@ sickbeard:
   volumes:
    - /downloads:/downloads
    - /downloads/tv:/tv
-   - /{PATH}/sickbeard/config:/config
+   - /home/download/sickbeard:/config
    - /etc/localtime:/etc/localtime
