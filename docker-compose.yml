@@ -4,7 +4,6 @@ transmission:
     - USERNAME=username
     - PASSWORD=password
   volumes:
-    - /etc/localtime:/etc/localtime
     - /downloads:/downloads
     - /home/download/transmission:/config
   ports:
@@ -18,4 +17,3 @@ sickbeard:
    - /downloads:/downloads
    - /downloads/tv:/tv
    - /home/download/sickbeard:/config
-   - /etc/localtime:/etc/localtime
